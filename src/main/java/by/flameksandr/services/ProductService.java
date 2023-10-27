@@ -12,7 +12,8 @@ public class ProductService {
     private ProductRepository productRepository;
 
     @Transactional
-    public void addOneProduct() {
+    public void addOneProduct() throws Exception {
         productRepository.addProduct("Beer");
+        throw new Exception(":(");
     }
 }
