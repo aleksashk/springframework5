@@ -12,8 +12,8 @@ public class ProductService {
     private ProductRepository productRepository;
 
     @Transactional
-    public void addOneProduct() throws Exception {
+    //rollsback the RuntimeException but does not rollback the checked exception
+    public void addOneProduct(){
         productRepository.addProduct("Beer");
-        throw new Exception(":(");
     }
 }
