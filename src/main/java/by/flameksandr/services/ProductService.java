@@ -10,8 +10,8 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    public void addOneProduct(){
+    public void addOneProduct() {
         productRepository.addProduct("Beer");
-
+        throw new RuntimeException(":(");
     }
 }
