@@ -1,6 +1,7 @@
 package by.flameksandr.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -10,6 +11,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 
 @Configuration
+@ComponentScan(basePackages = {"by.flameksandr.repositories","by.flameksandr.services"})
 public class ProjectConfig {
 
     @Bean
